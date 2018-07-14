@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  font-family: 'Markazi Text';
+}
+
+.initial-container {
+  width: 100vw;
+  height: 200vh;
+  position: relative;
+  transition: background-color 200ms ease;
+  background-color: red;
+}
+
+.secondary-container {
+  transition: background-color 200ms ease;
+  background-color: purple;
+  position: absolute;
+  width: 50%;
+  left: 25%;
+  top: 50%;
+  height: 50%;
+}
+
+.relative-box {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.first-shape {
+  transition: background-color 200ms ease;
+  background-color: blue;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  width: 50vw;
+  mix-blend-mode: difference;
+}
+
+.second-shape {
+  text-align: center;
+  transition: background-color 200ms ease;
+  background-color: green;
+  height: 50%;
+  position: sticky;
+  top: 0;
+  width: 50vw;
+  mix-blend-mode: difference;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bolder;
+  font-size: 50px;
+}
+
+.flipping-container {
+  padding: 100px 0;
+  background-color: white;
+  height: 150vh;
+  width: 100vw;
+  position: relative;
+}
+
+@keyframes jiggle {
+  0% {
+    transform: translateX(10px);
+  }
+
+  50% {
+    transform: translateX(-10px);
+
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.jiggle-animation {
+  animation: jiggle;
+  animation-duration: 200ms;
+}
+
+.moving-box {
+  position: sticky;
+  top: 100px;
+  height: 50vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stuck-box {
+  position: absolute;
+  bottom: 50%;
+  height: 50vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stuck-giphy-box {
+  width: 50%;
+  height: 100%;
+  background-color: blue;
+  mix-blend-mode: difference;
+}
+
+.giphy-box {
+  width: 50%;
+  height: 100%;
+  background-color: red;
+  mix-blend-mode: difference;
+}
+
+.giphy-box img, .stuck-giphy-box img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
